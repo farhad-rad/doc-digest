@@ -1,0 +1,28 @@
+{
+  "name": "doc-digest",
+  "version": "1.0.0",
+  "description": "Doc Digest is a service that transforms long documents into digestible, concise summaries using OpenAI’s advanced language model.",
+  "main": "./server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/farhad-rad/doc-digest.git"
+  },
+  "keywords": [
+    "summary",
+    "digest",
+    "document",
+    "pdf",
+    "word",
+    "summarize",
+    "ai"
+  ],
+  "author": "Farhad Rad (farhad.rad.official@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/farhad-rad/doc-digest/issues"
+  },
+  "homepage": "https://github.com/farhad-rad/doc-digest#readme"
+}
