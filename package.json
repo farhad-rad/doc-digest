@@ -4,12 +4,19 @@
   "description": "Doc Digest is a service that transforms long documents into digestible, concise summaries using OpenAI’s advanced language model.",
   "main": "./server/index.js",
   "scripts": {
-    "server:dev": "cd server && npm run dev",
+    "server:install": "cd server && npm install",
+    "server:start": "cd server && npm start",
+    "server:watch": "cd server && npm run watch",
     "server:build": "cd server && npm run build",
-    "client:dev": "cd client && npm run dev",
+    "client:install": "cd client && npm install",
+    "client:start": "cd client && npm start",
+    "client:watch": "cd client && npm run watch",
     "client:build": "cd client && npm run build",
-    "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"red,blue\" \"npm run server:dev\" \"npm run client:dev\"",
-    "build": "npm run client:build && npm run server:build"
+    "start": "npm run build && node ./dist/main.js",
+    "start:dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"red,blue\" \"npm run server:start\" \"npm run client:start\"",
+    "watch": "concurrently -n \"BACKEND,FRONTEND\" -c \"red,blue\" \"npm run server:watch\" \"npm run client:watch\"",
+    "build": "npm run client:build && npm run server:build",
+    "preinstall": "npm run server:install && npm run client:install"
   },
   "repository": {
     "type": "git",
