@@ -2,7 +2,7 @@
   "name": "doc-digest",
   "version": "1.0.0",
   "description": "Doc Digest is a service that transforms long documents into digestible, concise summaries using OpenAI’s advanced language model.",
-  "main": "./server/index.js",
+  "main": "./dist/main.js",
   "scripts": {
     "server:install": "cd server && npm install",
     "server:start": "cd server && npm start",
@@ -12,9 +12,9 @@
     "client:start": "cd client && npm start",
     "client:watch": "cd client && npm run watch",
     "client:build": "cd client && npm run build",
-    "start": "npm run build && node ./dist/main.js",
-    "start:dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"red,blue\" \"npm run server:start\" \"npm run client:start\"",
-    "watch": "concurrently -n \"BACKEND,FRONTEND\" -c \"red,blue\" \"npm run server:watch\" \"npm run client:watch\"",
+    "start": "npm run build && node .",
+    "start:dev": "concurrently -n \"SERVER,CLIENT\" -c \"red,blue\" \"npm run server:start\" \"npm run client:start\"",
+    "watch": "concurrently -n \"SERVER,CLIENT\" -c \"red,blue\" \"npm run server:watch\" \"npm run client:watch\"",
     "build": "npm run client:build && npm run server:build",
     "preinstall": "npm run server:install && npm run client:install"
   },
@@ -29,12 +29,16 @@
     "pdf",
     "word",
     "summarize",
-    "ai"
+    "ai",
+    "openai"
   ],
   "author": "Farhad Rad (farhad.rad.official@gmail.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/farhad-rad/doc-digest/issues"
   },
-  "homepage": "https://github.com/farhad-rad/doc-digest#readme"
+  "homepage": "https://github.com/farhad-rad/doc-digest#readme",
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
 }
