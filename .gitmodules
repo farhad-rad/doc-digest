@@ -1,3 +1,6 @@
 [submodule "client"]
 	path = client
 	url = https://github.com/farhad-rad/doc-digest-client-app.git
+[submodule "server"]
+	path = server
+	url = https://github.com/farhad-rad/doc-digest-server-app.git
