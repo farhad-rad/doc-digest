@@ -13,7 +13,7 @@
     "client:watch": "cd client && npm run watch",
     "server:build": "cd server && npm run build",
     "client:build": "cd client && npm run build",
-    "build": "cd server && tsc --outDir \"../dist\"",
+    "build": "npm run server:build && copyfiles -u 2 \"./server/dist/**/*\" dist/",
     "start": "npm run build && node .",
     "start:dev": "concurrently -n \"SERVER,CLIENT\" -c \"red,blue\" \"npm run server:start\" \"npm run client:start\"",
     "watch": "concurrently -n \"SERVER,CLIENT\" -c \"red,blue\" \"npm run server:watch\" \"npm run client:watch\""
@@ -39,6 +39,7 @@
   },
   "homepage": "https://github.com/farhad-rad/doc-digest#readme",
   "devDependencies": {
-    "concurrently": "^9.0.1"
+    "concurrently": "^9.0.1",
+    "copyfiles": "^2.4.1"
   }
 }
