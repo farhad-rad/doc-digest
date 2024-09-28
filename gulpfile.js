@@ -33,4 +33,4 @@ gulp.task("finish-up", function () {
     .pipe(clean());
 });
 
-gulp.task("build", gulp.series("clear", "compile", "move", "finish-up"));
+gulp.task("build", gulp.series("clear", "compile", "move"));
