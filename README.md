@@ -15,6 +15,8 @@ Clone the repository with all submodules included using `git` bash:
 > [!TIP]
 > Alternatively you can load submodules after cloning empty repository using this command:
 > ```bash 
+> git clone https://github.com/farhad-rad/doc-digest.git
+> cd doc-digest
 > git submodule update --init
 > ```
 
